@@ -90,6 +90,58 @@
     text-align: center;
 }
 
+.escolherAssento .dados{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    color: #293845;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 24px;
+}
+
+.escolherAssento .dados input{
+    height: 51px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    border: 1px solid #D4D4D4;
+}
+
+.escolherAssento .dados input::placeholder{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    color: #AFAFAF;
+
+    padding-left: 14px;
+}
+
+.escolherAssento .button{
+    display: flex;
+    justify-content: center;
+    width: 225px;
+    height: 42px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    border: none;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+
+    align-items: center;
+    margin-top: 57px;
+    margin-bottom: 30px;
+}
+
+.escolherAssento a:-webkit-any-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 .escolherAssento .footer{
     background-color: #dfe6ed;

@@ -1,0 +1,64 @@
+.sucesso{
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 67px;
+    width: 100vw;
+}
+
+.sucesso .status{
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 24px;
+    color: #247A6B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 0;
+}
+
+.sucesso .dados-filme, .sucesso .ingressos, .sucesso .comprador{
+    display: flex;
+    flex-direction: column;
+    padding-left: 29px;
+    margin-top: 30px;
+}
+.sucesso .title{
+    font-family: "roboto";
+    font-size: 24px;
+    font-weight: 700;
+    color: #293845;
+
+    margin-bottom: 15px;
+}
+
+.sucesso .infos{
+    font-family: "roboto";
+    font-size: 22px;
+    font-weight: 400;
+    color: #293845;
+
+    margin-bottom: 10px;
+}
+
+.sucesso .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 42px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    border: none;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+
+    margin-top: 57px;
+    margin-bottom: 30px;
+}

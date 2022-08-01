@@ -16,6 +16,8 @@ export default function App(){
         data: "",
         hour: "",
         ingressos: [],
+        ingressosId: [],
+        ingressoTeste: [],
         name: "",
         cpf: ""
     }

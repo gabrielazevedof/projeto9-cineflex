@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 
 import "./styles.css"
@@ -14,7 +14,7 @@ export default function EscolherAssento({objeto}){
             <Seats objeto={objeto}/>
             <Description />
             <PersonalData objeto={objeto} />
-            <Button />
+            <Button objeto={objeto}/>
             <Footer objeto={objeto}/>
         </div>
     )
@@ -52,7 +52,7 @@ function Seats({objeto}){
     )
 }
 
-function Seat({name, isAvailable, objeto}){
+function Seat({name, isAvailable, objeto, id}){
     const [selecionado, setSelecionado] = useState(false)
     
     let css 
@@ -62,14 +62,21 @@ function Seat({name, isAvailable, objeto}){
         
         if(selecionado) {
             let arr = []
+            let arrId = []
+            let arrTeste = []
             for (let i = 0; i < objeto.ingressos.length; i++) {
                 if (objeto.ingressos[i] !== name) {
                     arr.push(objeto.ingressos[i])
+                    arrId.push(objeto.ingressosId[i])
+                    // arrTeste[i] = {name:objeto.ingressos[i]}
+                    arrTeste.push({name:objeto.ingressos[i]})
                 } else {
                     continue
                 }
             }
             objeto.ingressos = arr;
+            objeto.ingressosId = arrId
+            objeto.ingressoTeste = arrTeste
             console.log(objeto)
         }
     }
@@ -77,6 +84,13 @@ function Seat({name, isAvailable, objeto}){
     if(selecionado){
         css = "selecionado"
         objeto.ingressos.push(name)
+        objeto.ingressosId.push(id)
+        for(let i = 0; i < objeto.ingressos.length; i++){
+            if(objeto.ingressos[i] === name){
+                objeto.ingressoTeste[i] = {name:name}
+            }
+        }
+        console.log(objeto)
     } else{
         css = "disponivel"
     } 
@@ -121,21 +135,37 @@ function PersonalData({objeto}) {
 
 
     return (
-        <div>
+        <div className="dados">
             Nome do Comprador
             <input type="string" placeholder={"Digite seu nome..."} onBlur={(e) => setNome(e.target.value)} />
-            CPF do Comprador
+            CPF do CompradorReservar assento(s)
             <input type="string" placeholder={"Digite seu CPF..."} onBlur={(e) => setCPF(e.target.value)} />
         </div>
     )
 }
 
-function Button(){
+function Button({objeto}){
+    function post(){
+        const url = "https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many"
+        const body = {
+            ids: objeto.ingressosId,
+            name: objeto.name,
+            cpf: objeto.cpf
+        }
+        const promise = axios.post(url, body)
+        promise.then(response => {
+            const {data} = response
+            console.log(data)
+        })
+        console.log(body)
+    }
+
+
     return(
         <Link to = "/sucesso">
-            <div className="botao">
-                <button>Reservar assento(s)</button>
-            </div>
+            <div className="button" onClick={() => post() }>
+                Reservar assento(s)
+            </div> 
         </Link>
     )
 }
