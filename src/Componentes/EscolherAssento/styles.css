@@ -1,0 +1,136 @@
+.escolherAssento {
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+.escolherAssento .title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 67px;
+    padding: 0 0 0 24px;
+}
+
+.escolherAssento .assentos{
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 0 24px 0 24px;
+    gap: 7px;
+}
+
+
+.escolherAssento .disponivel {
+    background-color: #C3CFD9;
+    font-size: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    width: 26px;
+    height: 26px;
+    
+    border: 1px solid #808F9D;
+}
+
+.escolherAssento .indisponivel {
+    font-size: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    width: 26px;
+    height: 26px;
+
+    background-color: #FBE192;
+
+    border: 1px solid #F7C52B;
+}
+.escolherAssento .selecionado {
+    background-color: #8DD7CF;
+    font-size: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    width: 26px;
+    height: 26px;
+    
+    border: 1px solid #1AAE9E;
+}
+.escolherAssento .status {
+    font-size: 13px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 18px;
+    margin-top: 16px;
+}
+.escolherAssento .status div, .escolherAssento .status div, .escolherAssento .status div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.escolherAssento .footer{
+    background-color: #dfe6ed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+
+    border: 1px solid #9EADBA;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0%;
+    
+    width: 100vw;
+    height: 117px;
+    padding: 0 0 0 24px;
+}
+
+.escolherAssento .footer img {
+    background-color: #FFFFFF;
+    
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px 0px #0000001A;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 64px;
+    height: 89px;
+}
+.escolherAssento .footer .informacoes {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 26px;
+    color: #293845;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 14px;
+    gap: 5px;
+}

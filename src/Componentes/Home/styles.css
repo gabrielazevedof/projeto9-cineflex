@@ -1,0 +1,36 @@
+.home{
+    background-color:  #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100vw;
+}
+.home .title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 67px;
+}
+.home .movies{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.home .movie{
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px 2px #0000001A;
+
+    margin: 0 0 11px 0
+}
+.home .movie img{
+    width: 129px;
+    height: 193px;
+}

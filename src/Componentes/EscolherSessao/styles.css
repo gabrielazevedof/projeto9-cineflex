@@ -1,0 +1,82 @@
+.escolherSessao{
+    background-color: #ffffff;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100vw;
+    padding-bottom: 117px;
+}
+.escolherSessao .title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 67px;
+    padding: 0 0 0 24px;
+}
+.escolherSessao .data{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+    display: flex;
+
+    padding: 0 0 0 24px;
+    
+}
+.escolherSessao .horarios {
+    display: flex;
+
+    padding: 0 0 0 24px;
+    gap: 8px;
+}
+.escolherSessao .horario{
+    background-color: #e8833a;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 3px;
+
+    width: 83px;
+    height: 43px;
+    margin: 23px 0 23px 0;
+}
+.escolherSessao .sessoes .horarios .horario a:-webkit-any-link  {
+    text-decoration: none;
+    color: #ffffff;
+}
+.escolherSessao .footer{
+    background-color: #dfe6ed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+
+    border: 1px solid #9EADBA;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0%;
+    
+    width: 100vw;
+    height: 117px;
+    padding: 0 0 0 24px;
+    
+}
+
+.escolherSessao .footer img {
+    width: 48px;
+    height: 72px;
+}
+
+.escolherSessao .footer .filme {
+    margin: 0 0 0 14px  ;
+}
